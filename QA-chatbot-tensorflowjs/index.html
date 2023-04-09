@@ -1,0 +1,61 @@
+<!-- Chatbot
+19.12.2022
+-Introduction to Natural Language Processing-
+Nadide Beyza Dokur
+Mustafa Değer Gökalp
+Yusra Yaren Kıraç
+-->
+<html lang="en-US">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load the QnA model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
+    <link href="index.css" rel="stylesheet">
+    <title>Chatbot</title>
+</head>
+
+<body style="background-color:white; font-family: 'Courier New'; background-image: url('bg.png');">
+    <div class="col-md-12 d-flex" style="top: 1; padding: 0;">
+        <div class="p-6 flex-fill">
+            <div class="col-md-12 text-left">
+                <input type="file" id="input-file" style="margin-bottom: 15; margin-left: -13;">
+                <h4 style="font-size: 18px; font-family: 'Courier New', Courier, monospace; margin-left: 3;"><b>What do you want to talk about it?</b></h4>
+                <textarea id='input-text' rows="15" cols="38" style="border-radius: 7px;" placeholder="Science, History, Math..."></textarea>
+            </div>
+            <div class="col-md-12 text-left mt-3">
+                <h4 style="font-size: 18px; margin-left: 3;"><b>Let's!</b></h4>
+                <input id="question" type="text" placeholder="Write something..." autocomplete="off" autofocus="true"/>
+            </div>
+            <div class="col-md-12 text-left">
+                <div style="margin-left: -7;" id="answer-button"></div>
+                <input style="font-size:15px;" type="button" id="btn" value="Download Chat"/>
+                <input style="font-size:15px;" type="button" id="btn2" value="Download All Possible Answers"/>
+            </div>
+        </div>
+        <div>
+            <h4 class="mt-5" style="margin-right: 20;"><b>Chat</b></h4>
+            <div class="p-6 flex-fill mr-3"style="background-color: white; color: black; position:absolute; width: 400px; height: 450px; right: -4; border:solid; border-radius: 10px; border-width: 3px;" >
+                <div class="col-md-12 text-right mr-5 ml-0 pl-0">           
+                    <div class="col-md-12 text-right" id='answer'>
+                        <div id="messages" class="messages ml-0 pl-0 "></div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>
